@@ -46,7 +46,7 @@ button {
  }
  a {
     text-decoration: none;
-    transition: color 3 00ms linear;
+   
     // color: inherit;
     
      }
@@ -141,6 +141,8 @@ button {
   padding-top: 24px;
   padding-bottom: 24px;
   position: relative;
+
+  transition: color 250ms linear;
   }
 
   .header-link.current::after {
@@ -190,7 +192,8 @@ button {
   /* SLATE */
 
   color: var(--text-color,#434455);
- 
+
+  transition: color 250ms linear;
    }
 
    .contacts-link:hover,
