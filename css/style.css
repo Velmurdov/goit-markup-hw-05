@@ -3,7 +3,7 @@ body {
     background-color: #FFFFFF;
     color: #434455;
     font-family: 'Roboto', 'Raleway', sans-serif;
-    padding-top: 73px;
+   
 }
 * {
     box-sizing: border-box;
@@ -73,9 +73,7 @@ button {
 
 
   .header { 
-   padding-top: 24px;
-  padding-bottom: 24px;
-   position: fixed;
+   position: sticky;
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -83,6 +81,7 @@ button {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1 ;
   }
   .header-logo{
      display: flex;
@@ -101,7 +100,7 @@ button {
 
   .header-logo-span {
     color: var(--title-color);
-    transition: color 250ms linear;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-logo-span:hover,
@@ -142,7 +141,7 @@ button {
   padding-bottom: 24px;
   position: relative;
 
-  transition: color 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-link.current::after {
@@ -152,7 +151,7 @@ button {
     width: 100%;
    height: 4px;
    left: 0px;
-   bottom: -20px;
+   bottom: -1px;
 
    background: #404BBF;
    border-radius: 2px;
@@ -193,7 +192,7 @@ button {
 
   color: var(--text-color,#434455);
 
-  transition: color 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 
    .contacts-link:hover,
@@ -258,7 +257,7 @@ button {
   min-width: 169px;
  padding: 16px 32px;
 margin: auto;
-transition:  background-color 250ms linear ;
+transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     
   }
    
@@ -280,7 +279,7 @@ transition:  background-color 250ms linear ;
     justify-content: center;
     fill: black;
     height: 112px;
-    transition: fill 250ms linear, background-color 250ms linear ;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
   
   }
 
@@ -533,7 +532,7 @@ background-color: var(--btn-background-focus-color);
   border: 1px solid currentColor;
 border-radius: 4px;
 color : #8E8F99;
-transition: color 250ms linear, border 250ms linear ;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
   
 }
 
@@ -611,11 +610,11 @@ letter-spacing: 0.04em;
  padding: 12px 24px;
  cursor: pointer;
 
- transition: color 250ms linear, background-color 250ms linear , box-shadow 250ms linear;
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) , box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .portfolio-btn:hover,
-.portfolio- btn:focus{
+.portfolio-btn:focus{
 color: var(--first-title-color);
 background-color: var(--btn-background-focus-color);
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -631,9 +630,10 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     width: 360px;
 }
-.portfolio-slides-item:hover .potfolio-slides-top-text {
+.portfolio-link:hover .potfolio-slides-top-text,
+.portfolio-link:focus .potfolio-slides-top-text {
   transform: translateY(0%);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-top-wrap{
@@ -644,7 +644,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
 .potfolio-slides-top-text {
   position: absolute;
   transform: translateY(100%) ;
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
   top: 0;
   padding: 40px;
@@ -675,7 +675,7 @@ color: #F4F4FD;
  }
  .portfolio-link {
   display: block;
-  transition: box-shadow 250ms linear;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
  }
 
@@ -725,7 +725,7 @@ color: #F4F4FD;
 
 .footer-logo-span { 
 color: #FFFFFF  ;
-transition: color 250ms linear;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
@@ -788,7 +788,7 @@ margin-bottom: 16px;
   background-color: #434455;
   fill: #FFFFFF;
   border-radius: 50%;
-  transition: background-color 250ms linear ;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
   
 }
 
@@ -804,7 +804,7 @@ margin-bottom: 16px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.39);
-  transition: opacity 250ms linear, visibility 250ms linear  ;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1)  ;
 }
 
 .modal {
@@ -817,7 +817,7 @@ margin-bottom: 16px;
   background: #FCFCFC;
   border-radius: 4px;
  transform: translate(-50%,-50%) scale(1);
- transition: transform 250ms linear;
+ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -838,11 +838,12 @@ margin-bottom: 16px;
   background-color: #E7E9FC;
   border: none;
   fill: black;
-  transition: fill 250ms linear, background-color 250ms linear ;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
-.modal-close:hover {
+.modal-close:hover,
+.modal-close:focus {
 background-color: var(--text-color);
 fill: var(--first-title-color);
 }
